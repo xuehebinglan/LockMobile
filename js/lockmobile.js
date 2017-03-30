@@ -239,7 +239,6 @@
             var that = this;
             this.canvas.addEventListener(this.startEvt, function(e) {
                 if (that.ableChange == 0) return;
-                console.log("start");
                 e.preventDefault();
                 that.uppdateCan(that.path_obj[0]);
                 var pos = that._getTouchPos(e);
@@ -249,7 +248,6 @@
             });
             this.canvas.addEventListener(this.moveEvt, function(e) {
                 if (that.ableChange == 0) return;
-                console.log("move");
                 if (that.mouse_stat == 1) {
                     e.preventDefault();
                     var pos = that._getTouchPos(e);
@@ -259,7 +257,6 @@
             });
             this.canvas.addEventListener(this.endEvt, function(e) {
                 if (that.ableChange == 0) return;
-                console.log("end");
                 that.uppdateCan();
                 that.mouse_stat = 0;
 
